@@ -24,14 +24,14 @@ In this project, we implement an 8-bit SAP-1 (Simple-As-Possible)computer in Ver
 
 ## Architecture
 1. **Program Counter**: Stores and increments the memory address of the next instruction to be executed.
-2.**Memory Address Register (MAR)**: Holds the 4-bit address of data or instructions in memory, sent from the Program Counter.
+2. **Memory Address Register (MAR)**: Holds the 4-bit address of data or instructions in memory, sent from the Program Counter.
 3. **Random-Access Memory (RAM)**: A 16 x 8 memory that stores data/instructions. Data is accessed based on the address from MAR.
 4. **Instruction Register**: Receives and splits instructions from RAM into upper and lower nibbles for control.
 5. **Controller-Sequencer**: Manages the control signals (control word) to ensure the correct operation of the system.
-6. **Accumulator**: An 8-bit register that holds intermediate results for arithmetic operations.
+6. **Accumulator**: An 8-bit register with intermediate arithmetic operations results.
 7. **Adder-Subtractor**: Performs addition or subtraction based on the value in the accumulator and B-register.
 8. **B-Register**: Stores data for arithmetic operations, interacting with the adder-subtractor.
-9.**Output Register**: Stores and displays the final output from the accumulator.
+9. **Output Register**: Stores and displays the final output from the accumulator.
 10. **Binary Display**: LEDs show the binary output from the output register for visual confirmation.
 
 
@@ -62,10 +62,10 @@ Control Word:
 | T2      | BE3H        | CP          |
 | T3      | 263H        |             |
 
-Operation Control Matrix pf SAP Architecture
+Operation Control Matrix of SAP Architecture
 
 | T State | Control Sq. | Active Bits | Routine      |
-|---------|--------------|-------------|--------------|
+|---------|-------------|-------------|--------------|
 | T1      | 5E3H        |             | FETCH        |
 | T2      | BE3H        | CP          |              |
 | T3      | 263H        |             |              |
@@ -86,7 +86,9 @@ Operation Control Matrix pf SAP Architecture
 | T5      | 3E3H        |             | OUT          |
 | T6      | 3E3H        |             |              |
 |---------|-------------|-------------|--------------|
-This architecture provides a clear understanding of how the SAP-1 processor functions, including the operations it can perform and the corresponding control sequences required for each instruction. The design facilitates basic data processing tasks, making it an excellent educational tool for understanding microprocessor architecture.
+
+
+This architecture provides a clear understanding of how the SAP-1 functions, including its operations and the corresponding control sequences required for each instruction. The design facilitates basic data processing tasks, making it an excellent educational tool for understanding microprocessor architecture.
 
 ## Control Unit
 Explain the components used...
