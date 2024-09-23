@@ -1,5 +1,12 @@
-# Simple-As-Possible 1 Computer 
-This repository contains my Verilog implementation of the SAP-1, an 8-bit microcomputer with a simple instruction set, ALU, registers, memory, and control unit. It demonstrates the fetch-decode-execute cycle and is ideal for learning basic CPU architecture. A testbench is included to simulate the processor's operations.
+# SAP-1 (Simple As Possible) Computer Implementation Using Verilog
+
+The SAP-1 computer is a foundational model designed to introduce core computer architecture concepts. Its simplicity makes it ideal for those beginning their exploration of how a computer operates at the most basic level, including interaction with memory, input/output, and executing instructions. Despite its simplicity, SAP-1 incorporates essential components such as an Arithmetic Logic Unit (ALU), registers, memory, and a control unit, which execute the fundamental fetch-decode-execute cycle.
+
+In this project, I have implemented the SAP-1 computer using Verilog. This 8-bit microcomputer demonstrates the basic working of a CPU, including instruction fetch, memory interaction, and data processing. Our implementation focuses on key instructions like LDA, ADD, SUB, OUT, and HLT to simulate basic arithmetic and control operations.
+
+The design was tested using an FPGA, which allows us to configure the processor after manufacturing, providing flexibility in testing and refining our implementation. A comprehensive testbench is included to verify the functionality of the processor, ensuring the correct execution of operations at each step of the cycle.
+
+This project serves as an excellent tool for learning CPU architecture and the principles of digital design.
 
 ## Table of Contents
 - [Description](#project-overview)
@@ -16,21 +23,26 @@ In this project, we implement an 8-bit SAP-1 (Simple-As-Possible)computer in Ver
 ![SAP-1 Processor Diagram](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje-5qfLwK7MbSywZJXEEuvJJCN6Hww3ECKz3Ho6ayLmj1W5CxNARhY2BN7cgFLTc0j8ITa5hxnbOFHNQsxC2kDAIUI64fvfCerC2Ver6KOgI6ljXBTpJq6jt_uJLjUrzUFWbjTvT9T8Xc/s1600/image1.jpeg)
 
 ## Architecture
-The SAP-1 (Simple-As-Possible) processor is an 8-bit microprocessor designed to demonstrate fundamental concepts of computer architecture. It features a simple instruction set that allows for basic data manipulation and control operations.
+1. **Program Counter**: Stores and increments the memory address of the next instruction to be executed.
+2.**Memory Address Register (MAR)**: Holds the 4-bit address of data or instructions in memory, sent from the Program Counter.
+3. **Random-Access Memory (RAM)**: A 16 x 8 memory that stores data/instructions. Data is accessed based on the address from MAR.
+4. **Instruction Register**: Receives and splits instructions from RAM into upper and lower nibbles for control.
+5. **Controller-Sequencer**: Manages the control signals (control word) to ensure the correct operation of the system.
+6. **Accumulator**: An 8-bit register that holds intermediate results for arithmetic operations.
+7. **Adder-Subtractor**: Performs addition or subtraction based on the value in the accumulator and B-register.
+8. **B-Register**: Stores data for arithmetic operations, interacting with the adder-subtractor.
+9.**Output Register**: Stores and displays the final output from the accumulator.
+10. **Binary Display**: LEDs show the binary output from the output register for visual confirmation.
 
-Hypothetical Instructions
-LDA: Load the Accumulator with data from a specified HEX address.
-Example: LDA 8H loads data from memory address 8H into the Accumulator.
 
-ADD: Adds the contents of the Accumulator with data from a specified memory location.
-Example: ADD 9H transfers the contents of 9H to a temporary register (B), then adds the Accumulator (A) and B, storing the result back in the Accumulator.
-
-SUB: Subtracts the contents of a specified memory location from the Accumulator.
-Example: SUB CH subtracts the data at CH from the Accumulator, with the result loaded back into the Accumulator.
-
-OUT: Transfers the contents of the Accumulator to the output register (implicit operation).
-
-HLT: Halts execution, marking the end of the program.
+Reduced Instruction Set of SAP-1
+| Mnemonic | Operation |
+|----------|--------|
+| LDA      | Load the Accumulator with data from a specified HEX address.   |
+| ADD      | Adds the contents of the Accumulator with data from a specified memory location.  |
+| SUB      | Subtracts the contents of a specified memory location from the Accumulator.   |
+| OUT      | Transfers the contents of the Accumulator to the output register (implicit operation)   |
+| HLT      | Halts execution, marking the end of the program.   |
 
 Opcode Design
 | Mnemonic | Opcode |
