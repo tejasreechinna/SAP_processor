@@ -1,5 +1,5 @@
-# RISC SAP-1 Processor 
-This repository contains my Verilog implementation of the SAP-1 processor, an 8-bit microprocessor with a simple instruction set, ALU, registers, memory, and control unit. It demonstrates the fetch-decode-execute cycle and is ideal for learning basic CPU architecture. A testbench is included to simulate the processor's operations.
+# Simple-As-Possible 1 Computer 
+This repository contains my Verilog implementation of the SAP-1, an 8-bit microcomputer with a simple instruction set, ALU, registers, memory, and control unit. It demonstrates the fetch-decode-execute cycle and is ideal for learning basic CPU architecture. A testbench is included to simulate the processor's operations.
 
 ## Table of Contents
 - [Description](#project-overview)
@@ -11,7 +11,7 @@ This repository contains my Verilog implementation of the SAP-1 processor, an 8-
 
 
 ## Description
-In this project, we implement an 8-bit SAP-1 (Simple-As-Possible) processor in Verilog. The sub-modules used in this design include the ALU, control unit, registers, memory, and program counter. Their interactions within the processor are demonstrated in the following diagram, showing the data flow and control signals
+In this project, we implement an 8-bit SAP-1 (Simple-As-Possible)computer in Verilog. The sub-modules used in this design include the Program counter, MAR, 16x8 static TTL RAM, IR, Accumulator, Adder/subtractor, B Register and Binary display. Their interactions within the processor are demonstrated in the following diagram, showing the data flow and control signals
 
 ![SAP-1 Processor Diagram](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje-5qfLwK7MbSywZJXEEuvJJCN6Hww3ECKz3Ho6ayLmj1W5CxNARhY2BN7cgFLTc0j8ITa5hxnbOFHNQsxC2kDAIUI64fvfCerC2Ver6KOgI6ljXBTpJq6jt_uJLjUrzUFWbjTvT9T8Xc/s1600/image1.jpeg)
 
