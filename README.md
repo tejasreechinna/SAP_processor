@@ -53,39 +53,28 @@ Opcode Design
 | OUT      | 1110   |
 | HLT      | 1111   |
 
-Control Matrix for Fetch Cycle
-Control Word:
 
-| T State | Control Sq. | Active Bits |
-|---------|--------------|-------------|
-| T1      | 5E3H        |             |
-| T2      | BE3H        | CP          |
-| T3      | 263H        |             |
-
+# Control Unit 
 Operation Control Matrix of SAP Architecture
 
 | T State | Control Sq. | Active Bits | Routine      |
 |---------|-------------|-------------|--------------|
-| T1      | 5E3H        |             | FETCH        |
-| T2      | BE3H        | CP          |              |
+| T1      | 5E3H        |             |              |
+| T2      | BE3H        | CP          |  FETCH       |
 | T3      | 263H        |             |              |
-|---------|-------------|-------------|--------------|
 | T4      | 1A3H        |             |              |
 | T5      | 2C3H        |             | LDA          |
 | T6      | 3E3H        | ---         |              |
-|---------|-------------|-------------|--------------|
 | T4      | 1A3H        |             |              |
 | T5      | 2E1H        |             | ADD          |
 | T6      | 3C7H        |             |              |
-|---------|-------------|-------------|--------------|
 | T4      | 1A3H        |             |              |
 | T5      | 2E1H        |             | SUB          |
 | T6      | 3C7H        |             |              |
-|---------|-------------|-------------|--------------|
 | T4      | 3F2H        |             |              |
 | T5      | 3E3H        |             | OUT          |
 | T6      | 3E3H        |             |              |
-|---------|-------------|-------------|--------------|
+
 
 
 This architecture provides a clear understanding of how the SAP-1 functions, including its operations and the corresponding control sequences required for each instruction. The design facilitates basic data processing tasks, making it an excellent educational tool for understanding microprocessor architecture.
