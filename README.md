@@ -20,7 +20,7 @@ This project serves as an excellent tool for learning CPU architecture and the p
 ## Description
 In this project, we implement an 8-bit SAP-1 (Simple-As-Possible)computer in Verilog. The sub-modules used in this design include the Program counter, MAR, 16x8 static TTL RAM, IR, Accumulator, Adder/subtractor, B Register and Binary display. Their interactions within the processor are demonstrated in the following diagram, showing the data flow and control signals
 
-![SAP-1 Processor Diagram](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje-5qfLwK7MbSywZJXEEuvJJCN6Hww3ECKz3Ho6ayLmj1W5CxNARhY2BN7cgFLTc0j8ITa5hxnbOFHNQsxC2kDAIUI64fvfCerC2Ver6KOgI6ljXBTpJq6jt_uJLjUrzUFWbjTvT9T8Xc/s1600/image1.jpeg)
+![SAP-1 Processor Diagram](https://karenok.github.io/SAP-1-Computer/images/sap-1-architecture.png)
 
 ## Architecture
 1. **Program Counter**: Stores and increments the memory address of the next instruction to be executed.
